@@ -23,11 +23,11 @@ jobs:
           mkdir -p _site/videos
           cp index.html styles.css _site/
           for pair in en-zh en-ja en-de; do
-            cat "$pair".mp4.part* > _site/videos/"$pair".mp4
+            cp "$pair"-combined.mp4 _site/videos/"$pair".mp4
           done
-          echo '4d0509caa0d0892a5c97677d7c3288b0ae39be95772b32ed3fc52ee5b6f2cb15  _site/videos/en-zh.mp4' | sha256sum -c
-          echo '3eac3af34df3d9faed872886ec5aeec956031e222f662379e88576a4f1438786  _site/videos/en-ja.mp4' | sha256sum -c
-          echo 'b67f412fba8eaaf3a37aee1ff2315cca423bbcfe7e7f8941aab6607c46d826b1  _site/videos/en-de.mp4' | sha256sum -c
+          echo 'e59960412c8f88368ee2a7a03f719291fbfb894a8c475a17aad3776694785657  _site/videos/en-zh.mp4' | sha256sum -c
+          echo 'c0c2f00e82b2c736f36f52d852620864af173a99d74f66379148435fa07e1f38  _site/videos/en-ja.mp4' | sha256sum -c
+          echo '9d94db8958c9f3217b4a0f77f2361f8f10d21f70961ce9059848e8806c319493  _site/videos/en-de.mp4' | sha256sum -c
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
