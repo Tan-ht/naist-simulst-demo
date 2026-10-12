@@ -46,7 +46,11 @@ a:focus-visible, video:focus-visible { outline: 3px solid #6385be; outline-offse
 .brand-mark i:nth-child(3) { height: 10px; }
 
 .demos { max-width: 1104px; margin: 0 auto; padding: 28px 32px 48px; }
-.section-title { margin-bottom: 14px; }
+.section-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; margin-bottom: 14px; }
+.demo-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.demo-label > span { color: var(--muted); font-size: 11px; line-height: 1.5; }
+.source-link { color: #5d6676; font-size: 11px; line-height: 1.5; text-decoration: underline; text-decoration-color: #c9cdd4; text-underline-offset: 3px; }
+.source-link:hover { color: #202124; text-decoration-color: currentColor; }
 .section-title h2 {
   margin: 0;
   font-size: 13px;
@@ -100,7 +104,7 @@ a:focus-visible, video:focus-visible { outline: 3px solid #6385be; outline-offse
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1920 / 924;
+  aspect-ratio: auto;
   object-fit: contain;
   border: 1px solid #e9eaee;
   border-radius: 10px;
